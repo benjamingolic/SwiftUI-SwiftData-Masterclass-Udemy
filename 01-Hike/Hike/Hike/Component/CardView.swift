@@ -24,29 +24,35 @@ struct CardView: View {
   
   var body: some View {
     ZStack {
-      CustomBackgroundView()
+      Color(.systemBackground)
+        .edgesIgnoringSafeArea(.all)
       
       VStack {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 8) {
           HStack {
             Text("Hiking")
-              .fontWeight(.black)
-              .font(.system(size: 52))
+              .font(.system(size: 48, weight: .bold, design: .rounded))
               .foregroundStyle(
                 LinearGradient(
-                  colors: [.colorGrayLight, .colorGrayMedium],
-                  startPoint: .top,
-                  endPoint: .bottom
+                  colors: [.blue, .green],
+                  startPoint: .topLeading,
+                  endPoint: .bottomTrailing
                 )
               )
             
             Spacer()
             
             Button(action: {
-              print("Button was pressed.")
               isSheetShowing.toggle()
             }) {
-              CustomButtonView()
+              Image(systemSymbol: .figureHiking)
+                .font(.system(size: 30, weight: .semibold))
+                .foregroundStyle(.primary)
+                .padding()
+                .background(
+                  Circle()
+                    .fill(Color.secondary.opacity(0.1))
+                )
             }
             .sheet(isPresented: $isSheetShowing) {
               SettingsView()
@@ -56,9 +62,8 @@ struct CardView: View {
           }
           
           Text("Fun and enjoyable outdoor activity for friends and families.")
-            .multilineTextAlignment(.leading)
-            .italic()
-            .foregroundStyle(.colorGrayMedium)
+            .font(.footnote)
+            .foregroundColor(.secondary)
         }
         .padding(.horizontal, 30)
         
@@ -68,29 +73,24 @@ struct CardView: View {
           Image("image-\(imageNumber)")
             .resizable()
             .scaledToFit()
-            .animation(.default, value: imageNumber)
+            .animation(.easeInOut(duration: 0.3), value: imageNumber)
         }
+        .padding(.top, 16)
         
         Button(action: {
           randomImageNumber()
         }) {
           Text("Explore More")
-            .fontWeight(.heavy)
-            .font(.title2)
-            .foregroundStyle(
-              LinearGradient(
-                colors: [.colorGreenLight, .colorGreenMedium],
-                startPoint: .top,
-                endPoint: .bottom
-              )
-            )
-            .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
+            .fontWeight(.bold)
+            .font(.title3)
         }
         .buttonStyle(GradientButton())
-        
+        .padding(.top, 20)
       }
     }
     .frame(width: 320, height: 570)
+    .cornerRadius(30)
+    .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
   }
 }
 

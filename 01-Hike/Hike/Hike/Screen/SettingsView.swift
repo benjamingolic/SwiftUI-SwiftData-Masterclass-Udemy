@@ -39,10 +39,10 @@ struct SettingsView: View {
           Spacer()
         }
         .foregroundStyle(
-          LinearGradient (
-            colors: [.colorGreenLight, .colorGreenMedium, .colorGreenDark],
-            startPoint: .top,
-            endPoint: .bottom
+          LinearGradient(
+            colors: [.blue, .green],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
           )
         )
         .padding(.top, 8)

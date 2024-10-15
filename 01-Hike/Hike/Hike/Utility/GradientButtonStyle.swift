@@ -10,24 +10,29 @@ import SwiftUI
 
 struct GradientButton: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
-    configuration
-      .label
+    configuration.label
       .padding(.vertical)
       .padding(.horizontal, 30)
-      .background (
-        configuration.isPressed ?
-        LinearGradient (
-          colors: [.colorGrayMedium, .colorGrayLight],
-          startPoint: .top,
-          endPoint: .bottom
-        )
-        :
-          LinearGradient (
-            colors: [.colorGrayLight, .colorGrayMedium],
-            startPoint: .top,
-            endPoint: .bottom
-          )
+      .background(
+        configuration.isPressed
+          ? LinearGradient(
+              colors: [.blue.opacity(0.7), .green.opacity(0.7)],
+              startPoint: .topLeading,
+              endPoint: .bottomTrailing
+            )
+          : LinearGradient(
+              colors: [.blue, .green],
+              startPoint: .topLeading,
+              endPoint: .bottomTrailing
+            )
       )
-      .cornerRadius(40)
+      .foregroundColor(.white)
+      .cornerRadius(20)
+      .scaleEffect(configuration.isPressed ? 0.97 : 1.0)
+      .shadow(
+        color: .black.opacity(configuration.isPressed ? 0.05 : 0.1),
+        radius: 5, x: 0, y: 4
+      )
   }
 }
+

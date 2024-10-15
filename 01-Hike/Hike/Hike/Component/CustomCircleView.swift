@@ -15,7 +15,7 @@ struct CustomCircleView: View {
       Circle()
         .fill(
           LinearGradient(
-            colors: [.colorIndigoMedium, .colorSalmonLight],
+            colors: [.blue.opacity(0.1), .blue.opacity(0.2)],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
           )
