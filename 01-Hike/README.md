@@ -15,24 +15,30 @@ Hike is a SwiftUI project I built following the "SwiftUI + SwiftData Masterclass
 ### New Design
 I customized the design to give the app a modern, flat look. Here are the updated UI elements with my personal touch:
 
-<img src="./Screenshots/newLook1.PNG" alt="New Look 1" width="180"/>
-<img src="./Screenshots/newLook2.PNG" alt="New Look 2" width="180"/>
-<img src="./Screenshots/newLook3.PNG" alt="New Look 3" width="180"/>
-<img src="./Screenshots/newLook4.PNG" alt="New Look 4" width="180"/>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./Screenshots/newLook1.PNG" alt="New Look 1" width="180"/>
+    <img src="./Screenshots/newLook2.PNG" alt="New Look 2" width="180"/>
+    <img src="./Screenshots/newLook3.PNG" alt="New Look 3" width="180"/>
+    <img src="./Screenshots/newLook4.PNG" alt="New Look 4" width="180"/>
+</div>
 
 ### Original Design
 These screenshots show the app's original design before my custom updates:
 
-<img src="./Screenshots/oldLook1.PNG" alt="Old Look 1" width="180"/>
-<img src="./Screenshots/oldLook2.PNG" alt="Old Look 2" width="180"/>
-<img src="./Screenshots/oldLook3.PNG" alt="Old Look 3" width="180"/>
-<img src="./Screenshots/oldLook4.PNG" alt="Old Look 4" width="180"/>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./Screenshots/oldLook1.PNG" alt="Old Look 1" width="180"/>
+    <img src="./Screenshots/oldLook2.PNG" alt="Old Look 2" width="180"/>
+    <img src="./Screenshots/oldLook3.PNG" alt="Old Look 3" width="180"/>
+    <img src="./Screenshots/oldLook4.PNG" alt="Old Look 4" width="180"/>
+</div>
 
 ### App Icon
 The app supports alternate app icons, allowing users to switch between different designs:
 
-<img src="./Screenshots/appIconDefault.PNG" alt="Default Icon" width="180"/>
-<img src="./Screenshots/appIconAlt.PNG" alt="Alternate Icon" width="180"/>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./Screenshots/appIconDefault.PNG" alt="Default Icon" width="180"/>
+    <img src="./Screenshots/appIconAlt.PNG" alt="Alternate Icon" width="180"/>
+</div>
 
 ## Conclusion
 Through building the Hike app, I deepened my understanding of SwiftUI animations and learned how to create custom button styles, which was new to me.
