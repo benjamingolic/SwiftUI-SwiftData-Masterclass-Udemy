@@ -13,53 +13,53 @@ This course focuses on building iOS applications using SwiftUI and SwiftData. It
 * Description: A hiking app that demonstrates how to use alternate app icons with SwiftUI.
 * [View Project](./01-Hike)
 
-### 2. [RESTART – Advanced iOS App Design with SwiftUI](./02-restart)
+### 2. [RESTART – Advanced iOS App Design with SwiftUI](./02-Restart)
 * Description: This project focuses on advanced app design techniques using SwiftUI.
-* [View Project](./02-restart)
+* [View Project](./02-Restart)
 
-### 3. [PINCH – iOS App Development with SwiftUI](./03-pinch)
+### 3. [PINCH – iOS App Development with SwiftUI](./03-Pinch)
 * Description: A pinch-to-zoom feature is implemented in this app, showcasing user interaction design with SwiftUI.
-* [View Project](./03-pinch)
+* [View Project](./03-Pinch)
 
-### 4. [FRUITS – SwiftUI App Development](./04-fruits)
+### 4. [FRUITS – SwiftUI App Development](./04-Fruits)
 * Description: A simple fruits catalog app that demonstrates data handling and UI design in SwiftUI.
-* [View Project](./04-fruits)
+* [View Project](./04-Fruits)
 
-### 5. [AFRICA – Complex iOS App Layout with SwiftUI](./05-africa)
+### 5. [AFRICA – Complex iOS App Layout with SwiftUI](./05-Africa)
 * Description: A detailed look at creating complex layouts in SwiftUI with this African wildlife app.
-* [View Project](./05-africa)
+* [View Project](./05-Africa)
 
-### 6. [TOUCHDOWN – E-commerce app UI/UX design with SwiftUI](./06-touchdown)
+### 6. [TOUCHDOWN – E-commerce app UI/UX design with SwiftUI](./06-Touchdown)
 * Description: A mobile commerce app that focuses on user interface and user experience design.
-* [View Project](./06-touchdown)
+* [View Project](./06-Touchdown)
 
-### 7. [DEVOTE – iOS App with Core Data and SwiftUI Framework](./07-devote)
+### 7. [DEVOTE – iOS App with Core Data and SwiftUI Framework](./07-Devote)
 * Description: This project integrates Core Data into a SwiftUI app, demonstrating persistent storage techniques.
-* [View Project](./07-devote)
+* [View Project](./07-Devote)
 
-### 8. [NOTES – Apple Watch application with SwiftUI](./08-notes)
+### 8. [NOTES – Apple Watch application with SwiftUI](./08-Notes)
 * Description: A notes application designed for Apple Watch, using SwiftUI.
-* [View Project](./08-notes)
+* [View Project](./08-Notes)
 
-### 9. [DEVELOPERS – Build Your First iOS App with SwiftUI](./09-developers)
+### 9. [DEVELOPERS – Build Your First iOS App with SwiftUI](./09-Developers)
 * Description: A foundational project where the basics of iOS app development with SwiftUI are covered.
-* [View Project](./09-developers)
+* [View Project](./09-Developers)
 
-### 10. [AVOCADO RECIPES – Build a Food App With SwiftUI in Xcode](./10-avocado-recipes)
+### 10. [AVOCADO RECIPES – Build a Food App With SwiftUI in Xcode](./10-Avocado-Recipes)
 * Description: A recipe app that showcases how to work with lists, navigation, and data in SwiftUI.
-* [View Project](./10-avocado-recipes)
+* [View Project](./10-Avocado-Recipes)
 
-### 11. [SWIFTUI GAME – Build an app for iPhone and Mac](./11-swiftui-game)
+### 11. [SWIFTUI GAME – Build an app for iPhone and Mac](./11-Swiftui-Game)
 * Description: A simple game developed with SwiftUI for both iPhone and Mac.
-* [View Project](./11-swiftui-game)
+* [View Project](./11-Swiftui-Game)
 
-### 12. [TODOS – iOS and iPadOS app with Core Data and App Themes](./12-todos)
+### 12. [TODOS – iOS and iPadOS app with Core Data and App Themes](./12-Todos)
 * Description: A task management app demonstrating Core Data integration and theming in SwiftUI.
-* [View Project](./12-todos)
+* [View Project](./12-Todos)
 
-### 13. [HONEYMOON – Build a Tinder-Like Advanced iOS App](./13-honeymoon)
+### 13. [HONEYMOON – Build a Tinder-Like Advanced iOS App](./13-Honeymoon)
 * Description: An advanced project that builds a Tinder-like app in SwiftUI.
-* [View Project](./13-honeymoon)
+* [View Project](./13-Honeymoon)
 
 ---
 
