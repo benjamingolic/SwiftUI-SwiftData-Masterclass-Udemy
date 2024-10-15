@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct CardView: View {
+  
+  @State private var imageNumber: Int = 1
+  @State private var randNumber: Int = 1
+  
+  func randomImageNumber() {
+    print ("Old Image Number: \(imageNumber)")
+    while randNumber == imageNumber {
+      randNumber = Int.random(in: 1...5)
+    }
+    imageNumber = randNumber
+    print("New Image Number: \(imageNumber)")
+  }
+  
   var body: some View {
     ZStack {
       CustomBackgroundView()
@@ -53,10 +66,29 @@ struct CardView: View {
             )
             .frame(width: 256, height: 256)
           
-          Image("image-1")
+          Image("image-\(imageNumber)")
             .resizable()
             .scaledToFit()
+            .animation(.default, value: imageNumber)
         }
+        
+        Button(action: {
+          randomImageNumber()
+        }) {
+          Text("Explore More")
+            .fontWeight(.heavy)
+            .font(.title2)
+            .foregroundStyle(
+              LinearGradient(
+                colors: [.colorGreenLight, .colorGreenMedium],
+                startPoint: .top,
+                endPoint: .bottom
+              )
+            )
+            .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
+        }
+        .buttonStyle(GradientButton())
+        
       }
     }
     .frame(width: 320, height: 570)
