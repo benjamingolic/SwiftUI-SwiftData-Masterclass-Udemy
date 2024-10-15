@@ -25,7 +25,6 @@ struct CustomBackgroundView: View {
       )
       .cornerRadius(40)
     }
-    .frame(width: 320, height: 570)
   }
 }
 
