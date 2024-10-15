@@ -11,7 +11,7 @@ This course focuses on building iOS applications using SwiftUI and SwiftData. It
 
 ### 1. [HIKE - SwiftUI Project with Alternate App Icons](./01-HIKE)
 * Description: A hiking app that demonstrates how to use alternate app icons with SwiftUI.
-* [View Project](./01-HIKE)
+* [View Project](./01-Hike)
 
 ### 2. [RESTART – Advanced iOS App Design with SwiftUI](./02-RESTART)
 * Description: This project focuses on advanced app design techniques using SwiftUI.
