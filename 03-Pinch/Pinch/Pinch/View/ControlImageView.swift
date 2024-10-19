@@ -13,7 +13,7 @@ struct ControlImageView: View {
   
     var body: some View {
       Image(systemSymbol: icon)
-        .font(.system(size: 36))
+        .font(.system(size: 28))
     }
 }
 

@@ -12,6 +12,8 @@ struct InfoPanelView: View {
   var offset: CGSize
   
   @State var isInfoPanelVisible: Bool = false
+
+  let hapticFeedback = UINotificationFeedbackGenerator()
   
   var body: some View {
     HStack {
@@ -22,6 +24,7 @@ struct InfoPanelView: View {
         .onLongPressGesture(minimumDuration: 1) {
           withAnimation(.easeOut) {
             isInfoPanelVisible.toggle()
+            hapticFeedback.notificationOccurred(.success )
           }
         }
       
@@ -29,17 +32,20 @@ struct InfoPanelView: View {
       
       HStack(spacing: 2) {
         Image(systemSymbol: .arrowUpLeftAndArrowDownRight)
-        Text("\(scale)")
+        Text(String(format: "%.2f", scale))
+          .animation(.easeInOut, value: scale)
         
         Spacer()
         
         Image(systemSymbol: .arrowLeftAndRight)
-        Text("\(offset.width)")
+        Text(String(format: "%.2f", offset.width))
+          .animation(.easeInOut, value: offset.width)
         
         Spacer()
         
         Image(systemSymbol: .arrowUpAndDown)
-        Text("\(offset.height)")
+        Text(String(format: "%.2f", offset.height))
+          .animation(.easeInOut, value: offset.height)
         
         Spacer()
       }
