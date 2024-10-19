@@ -38,8 +38,8 @@ The **Restart App** is a SwiftUI-based application that delivers a clean and int
 ## Screenshots
 
 <div align="center" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 5px;">  
-    <img src="./Screenshots/screen1.PNG" alt="New Look 1" width="180"/>
-    <img src="./Screenshots/screen2.PNG" alt="New Look 2" width="180"/>
+    <img src="./Screenshots/screen1.PNG" alt="Onboarding Screen" width="180"/>
+    <img src="./Screenshots/screen2.PNG" alt="Home Screen" width="180"/>
 </div>
 
 ---
