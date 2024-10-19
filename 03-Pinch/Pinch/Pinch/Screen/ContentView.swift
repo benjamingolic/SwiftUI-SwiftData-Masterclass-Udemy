@@ -12,6 +12,8 @@ struct ContentView: View {
   @State private var isAnimating: Bool = false
   @State private var imageScale: CGFloat = 1
   @State private var imageOffset: CGSize = .zero // CGSize(width: 0, height: 0)
+  @State private var isDrawerOpen: Bool = false
+  @State private var chevronSymbol: SFSymbol = .chevronCompactLeft
   
   func resetImageState() {
     return withAnimation(.spring()) {
@@ -130,6 +132,32 @@ struct ContentView: View {
         }
           .padding(.bottom, 30)
         , alignment: .bottom
+      )
+      .overlay(
+        HStack(spacing: 12) {
+          Image(systemSymbol: chevronSymbol)
+            .resizable()
+            .scaledToFit()
+            .frame(height: 40)
+            .padding(8)
+            .foregroundStyle(.secondary)
+            .onTapGesture {
+              chevronSymbol = isDrawerOpen ? .chevronCompactLeft : .chevronCompactRight
+              withAnimation(.easeOut) {
+                isDrawerOpen.toggle()
+              }
+            }
+          
+          Spacer()
+        }
+          .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+          .background(.ultraThinMaterial)
+          .clipShape(RoundedRectangle(cornerRadius: 12))
+          .opacity(isAnimating ? 1 : 0)
+          .frame(width: 260)
+          .padding(.top, UIScreen.main.bounds.height / 12)
+          .offset(x: isDrawerOpen ? 20 : 215)
+        , alignment: .topTrailing
       )
     }
   }
