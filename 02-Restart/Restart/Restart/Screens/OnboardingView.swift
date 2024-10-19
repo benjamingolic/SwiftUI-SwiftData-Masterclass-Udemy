@@ -10,6 +10,9 @@ import SwiftUI
 struct OnboardingView: View {
   @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
   
+  @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
+  @State private var buttonOffset: Double = 0
+  
   var body: some View {
     ZStack {
       Color(.colorBlue)
@@ -32,7 +35,7 @@ struct OnboardingView: View {
           .foregroundStyle(.white)
           .multilineTextAlignment(.center)
           .padding(.horizontal, 10)
-        } // end VStack | Header
+        }
         
         ZStack {
           CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
@@ -40,7 +43,7 @@ struct OnboardingView: View {
           Image("character-1")
             .resizable()
             .scaledToFit()
-        } // end ZStack | Center
+        }
         
         Spacer()
         
@@ -61,7 +64,7 @@ struct OnboardingView: View {
           HStack {
             Capsule()
               .fill(.colorRed)
-              .frame(width: 80)
+              .frame(width: buttonOffset + 80)
             
             Spacer()
           }
@@ -75,22 +78,34 @@ struct OnboardingView: View {
                 .padding(8)
               Image(systemSymbol: .chevronRight2)
                 .font(.system(size: 24, weight: .bold))
-            } // end ZStack
+            }
             .foregroundStyle(.white)
             .frame(width: 80, height: 80, alignment: .center)
-            .onTapGesture {
-              isOnboardingViewActive = false
-            }
+            .offset(x: buttonOffset)
+            .gesture(
+              DragGesture()
+                .onChanged { value in
+                  if value.translation.width > 0 && buttonOffset <= buttonWidth - 80 {
+                    buttonOffset = value.translation.width
+                  }
+                }
+                .onEnded { _ in
+                  if buttonOffset > buttonWidth / 2 {
+                    buttonOffset = buttonWidth - 80
+                    isOnboardingViewActive = false
+                  } else {
+                    buttonOffset = 0
+                  }
+                }
+            )
             
             Spacer()
-          } // end HStack
-          
-        } // end ZStack | Footer
-        .frame(height: 80, alignment: .center)
+          }
+        }
+        .frame(width: buttonWidth, height: 80, alignment: .center)
         .padding()
-      } // end VStack
-    } // end ZStack
-    
+      }
+    }
   }
 }
 
