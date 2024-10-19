@@ -29,7 +29,7 @@ struct HomeView: View {
               .easeInOut(duration: 4)
               .repeatForever(), value: isAnimating
           )
-      } // end ZStack | Center
+      }
       
       Text("""
           The time that leads to mastery is 
@@ -41,13 +41,12 @@ struct HomeView: View {
       .multilineTextAlignment(.center)
       .padding()
       
-      
       Spacer()
       
       Button(action: {
         withAnimation {
           isOnboardingViewActive = true
-        }        
+        }
       }) {
         Image(systemSymbol: .arrowTriangle2CirclepathCircleFill)
           .imageScale(.large)
