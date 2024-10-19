@@ -15,6 +15,9 @@ struct ContentView: View {
   @State private var isDrawerOpen: Bool = false
   @State private var chevronSymbol: SFSymbol = .chevronCompactLeft
   
+  let pages:[Page] = pagesData
+  @State private var currentPage: Int = 1
+  
   func resetImageState() {
     return withAnimation(.spring()) {
       imageScale = 1
@@ -27,7 +30,7 @@ struct ContentView: View {
       ZStack {
         Color.clear
         
-        Image("magazine-front-cover")
+        Image(pages[currentPage-1].imageName)
           .resizable()
           .aspectRatio(contentMode: .fit)
           .cornerRadius(10)
@@ -147,7 +150,22 @@ struct ContentView: View {
                 isDrawerOpen.toggle()
               }
             }
-          
+          ForEach(pages) { page in
+            Image(page.thumbName)
+              .resizable()
+              .scaledToFit()
+              .frame(width: 80)
+              .cornerRadius(8)
+              .shadow(radius: 4)
+              .opacity(isDrawerOpen ? 1 : 0)
+              .animation(.easeOut(duration: 0.5), value: isDrawerOpen)
+              .onTapGesture {
+                isAnimating = true
+                withAnimation(.easeOut) {
+                  currentPage = page.id
+                }
+              }
+          }
           Spacer()
         }
           .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
