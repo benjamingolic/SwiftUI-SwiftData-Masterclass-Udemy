@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8CC1BC2A2CC426BD00900509 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 8CC1BC292CC426BD00900509 /* SFSafeSymbols */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8CC1BC122CC4178000900509 /* Pinch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC1BC2A2CC426BD00900509 /* SFSafeSymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = Pinch;
 			packageProductDependencies = (
+				8CC1BC292CC426BD00900509 /* SFSafeSymbols */,
 			);
 			productName = Pinch;
 			productReference = 8CC1BC122CC4178000900509 /* Pinch.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 8CC1BC092CC4178000900509;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8CC1BC282CC426BD00900509 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8CC1BC132CC4178000900509 /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CC1BC282CC426BD00900509 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CC1BC292CC426BD00900509 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CC1BC282CC426BD00900509 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CC1BC0A2CC4178000900509 /* Project object */;
 }
